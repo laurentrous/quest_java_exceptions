@@ -16,16 +16,20 @@ public class OddSum {
                 System.out.print(" " + v);
             System.out.println();
         }
-        for (int i = 0; i < args.length; i++) {
-            listInt.add(Integer.parseInt(args[i]));
-        }
+        try {
+            for (int i = 0; i < args.length; i++) {
+                listInt.add(Integer.parseInt(args[i]));
+            }
 
-        res = sum(listInt);
-        if (test) {
-            return res;
-        }
+            res = sum(listInt);
+            if (test) {
+                return res;
+            }
 
-        System.out.println("Sum of odd elements : " + res);
+            System.out.println("Sum of odd elements : " + res);
+        } catch (NumberFormatException e){
+            return -1;
+        }
         System.out.println("END!");
 
         return 0;
